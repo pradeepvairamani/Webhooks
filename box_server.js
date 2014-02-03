@@ -6,6 +6,7 @@ var server = http.createServer(function(req, res){
 	res.writeHead(200, {'Content-Type': 'text/plain'});
 
 	if (req.url == "/log"){
+		console.log('result is %s', res);
 		logs.push(res)
 		console.log('added to the log array');
 	} else {
@@ -22,4 +23,4 @@ var server = http.createServer(function(req, res){
 	}
 });
 server.listen(port);
-console.log('server running at %s', port);
+console.log('server is running at %s', port);
